@@ -7,7 +7,13 @@
 //pass out from hunger. Write a function to work out if you can survive the queue.
 //Return "I will survive!" if you will, otherwise, return "I am too hungry to survive."
 
-function microwaveMayhem(peopleInQueue, yourLunchTime, minutesLeftToSurvive) {}
+function microwaveMayhem(peopleInQueue, yourLunchTime, minutesLeftToSurvive) {
+  let time = peopleInQueue * 2 + yourLunchTime;
+
+  if (minutesLeftToSurvive >= time) {
+    return "I will survive!";
+  } else return "I am too hungry to survive!";
+}
 
 module.exports = {
   microwaveMayhem
